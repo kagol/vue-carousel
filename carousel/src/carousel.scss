@@ -1,0 +1,73 @@
+.devui-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.devui-carousel-item-container {
+  display: flex;
+  position: relative;
+  transition: left 500ms ease 0s; // 内容切换时的动效
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.devui-carousel-pagination {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -18px;
+
+  .arrow {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background: var(--devui-highlight-overlay, rgba(255, 255, 255, .8));
+    box-shadow: var(--devui-shadow-length-hover, 0 4px 16px 0) var(--devui-light-shadow, rgba(0, 0, 0, .1));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    transition: background-color var(--devui-animation-duration-slow, .3s) var(--devui-animation-ease-in-out-smooth, cubic-bezier(.645, .045, .355, 1));
+
+    &:hover {
+      background: var(--devui-area, #f8f8f8);
+    }
+
+    &.arrow-left {
+      margin-left: 20px;
+    }
+
+    &.arrow-right {
+      margin-right: 20px;
+    }
+  }
+}
+
+.devui-carousel-indicator {
+  display: flex;
+  position: absolute;
+  bottom: 12px;
+  justify-content: center;
+  width: 100%;
+
+  .devui-carousel-indicator-item {
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    background: var(--devui-icon-fill, #d3d5d9);
+
+    &.active {
+      width: 24px;
+      background: var(--devui-list-item-active-bg, #5e7ce0);
+      transition: all var(--devui-animation-duration-slow, .3s) var(--devui-animation-ease-in-smooth, cubic-bezier(.645, .045, .355, 1));
+    }
+  }
+}
