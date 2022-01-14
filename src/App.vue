@@ -5,8 +5,15 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <DCarousel>
+      <div class="carousel-item">page 1</div>
+      <div class="carousel-item">page 2</div>
+      <div class="carousel-item">page 3</div>
+    </DCarousel>
+  </div>
 </template>
 
 <style>
@@ -17,5 +24,10 @@ import HelloWorld from './components/HelloWorld.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.carousel-item {
+  text-align: center;
+  line-height: 200px;
+  background: #f3f6f8;
 }
 </style>

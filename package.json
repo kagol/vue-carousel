@@ -1,9 +1,14 @@
 {
   "name": "vue-carousel",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Vue3 Carousel",
+  "files": ["dist"],
+  "main": "./dist/vue-carousel.umd.js",
+  "module": "./dist/vue-carousel.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:lib": "vue-tsc --noEmit && vite build --config vite.config.lib.ts",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -11,6 +16,8 @@
     "register:components": "vitepress-rc",
     "test": "jest"
   },
+  "author": "Kagol <kagol@sina.com>",
+  "license": "MIT",
   "dependencies": {
     "vue": "^3.2.25"
   },
