@@ -1,0 +1,24 @@
+.carousel-pagination {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: var(--devui-highlight-overlay, rgba(255, 255, 255, .8));
+  box-shadow: var(--devui-shadow-length-hover, 0 4px 16px 0) var(--devui-light-shadow, rgba(0, 0, 0, .1));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--devui-animation-duration-slow, .3s) var(--devui-animation-ease-in-out-smooth, cubic-bezier(.645, .045, .355, 1));
+
+  &:hover {
+    background: var(--devui-area, #f8f8f8);
+  }
+
+  &.prev-page {
+    margin-left: 20px;
+  }
+  
+  &.next-page {
+    margin-right: 20px;
+  }
+}

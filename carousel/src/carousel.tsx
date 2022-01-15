@@ -1,14 +1,14 @@
 import { defineComponent, renderSlot, useSlots, watch, toRefs } from 'vue'
 import usePage from './composables/use-page'
 import DCarouselIndicator from './components/carousel-indicator'
-import DArrowLeft from './components/arrow-left'
-import DArrowRight from './components/arrow-right'
+import DCarouselPagination from './components/carousel-pagination'
 import './carousel.scss'
 
 export default defineComponent({
   name: 'DCarousel',
   components: {
     DCarouselIndicator,
+    DCarouselPagination,
   },
   props: {
     modelValue: {
@@ -41,26 +41,19 @@ export default defineComponent({
           >
             {renderSlot(useSlots(), 'default')}
           </div>
-          <div class="devui-carousel-pagination">
-            <button
-              class="arrow arrow-left"
-              onClick={() => {
-                emit('update:modelValue', props.modelValue - 1)
+          {
+            slots.pagination
+            ? renderSlot(slots, 'pagination')
+            : <div class="devui-carousel-pagination">
+              <DCarouselPagination onPrev={() => {
+                emit('update:modelValue', props.modelValue-1)
                 prevPage()
-              }}
-            >
-              <DArrowLeft />
-            </button>
-            <button
-              class="arrow arrow-right"
-              onClick={() => {
-                emit('update:modelValue', props.modelValue + 1)
+              }} onNext={() => {
+                emit('update:modelValue', props.modelValue+1)
                 nextPage()
-              }}
-            >
-              <DArrowRight />
-            </button>
-          </div>
+              }}></DCarouselPagination>
+            </div>
+          }
           {slots.indicator ? (
             slots.indicator()
           ) : (

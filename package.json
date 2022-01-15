@@ -1,5 +1,5 @@
 {
-  "name": "vue-carousel",
+  "name": "vue-devui-carousel",
   "version": "0.0.1",
   "description": "Vue3 Carousel",
   "files": ["dist"],
