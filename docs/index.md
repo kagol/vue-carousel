@@ -7,9 +7,7 @@
 ```vue
 <template>
   <DCarousel>
-    <div class="carousel-item">page 1</div>
-    <div class="carousel-item">page 2</div>
-    <div class="carousel-item">page 3</div>
+
   </DCarousel>
 </template>
 <style>
