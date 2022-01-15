@@ -303,56 +303,27 @@ export default defineComponent({
 ```vue
 <template>
   <DCarouselIndicator style="position: static;">
+    <template #default="pageInfo">
     <div class="box">
-      <div :class="['panel', pageIndex === 1 ? 'active' : '']" @click="setPageIndex(1)">
+      <div :class="['panel', pageInfo.pageIndex === 1 ? 'active' : '']" @click="pageInfo.setPageIndex(1)">
         <h3>Explore The World</h3>
       </div>
-      <div :class="['panel', pageIndex === 2 ? 'active' : '']" @click="setPageIndex(2)">
+      <div :class="['panel', pageInfo.pageIndex === 2 ? 'active' : '']" @click="pageInfo.setPageIndex(2)">
         <h3>Wild Forest</h3>
       </div>
-      <div :class="['panel', pageIndex === 3 ? 'active' : '']" @click="setPageIndex(3)">
+      <div :class="['panel', pageInfo.pageIndex === 3 ? 'active' : '']" @click="pageInfo.setPageIndex(3)">
         <h3>Sunny Beach</h3>
       </div>
-      <div :class="['panel', pageIndex === 4 ? 'active' : '']" @click="setPageIndex(4)">
+      <div :class="['panel', pageInfo.pageIndex === 4 ? 'active' : '']" @click="pageInfo.setPageIndex(4)">
         <h3>City on Winter</h3>
       </div>
-      <div :class="['panel', pageIndex === 5 ? 'active' : '']" @click="setPageIndex(5)">
+      <div :class="['panel', pageInfo.pageIndex === 5 ? 'active' : '']" @click="pageInfo.setPageIndex(5)">
         <h3>Mountains - Clouds</h3>
       </div>
     </div>
+    </template>
   </DCarouselIndicator>
 </template>
-<script>
-import { defineComponent, ref } from 'vue'
-
-function usePage(defaultPageIndex = 1) {
-  const pageIndex = ref(defaultPageIndex)
-
-  const setPageIndex = (current: number) => {
-    pageIndex.value = current
-  }
-
-  const jumpPage = (page: number) => {
-    pageIndex.value += page
-  }
-
-  const prevPage = () => jumpPage(-1)
-
-  const nextPage = () => jumpPage(1)
-
-  return { pageIndex, setPageIndex, jumpPage, prevPage, nextPage }
-}
-
-export default defineComponent({
-  setup() {
-    const { pageIndex, setPageIndex } = usePage(1)
-    return {
-      pageIndex,
-      setPageIndex,
-    }
-  }
-})
-</script>
 <style>
 .box {
   display: flex;
