@@ -1,14 +1,16 @@
 import { defineComponent, renderSlot, useSlots, watch, toRefs } from 'vue'
 import usePage from './composables/use-page'
 import DCarouselIndicator from './components/carousel-indicator'
-import DCarouselPagination from './components/carousel-pagination'
+import DCarouselPrev from './components/carousel-prev'
+import DCarouselNext from './components/carousel-next'
 import './carousel.scss'
 
 export default defineComponent({
   name: 'DCarousel',
   components: {
     DCarouselIndicator,
-    DCarouselPagination,
+    DCarouselPrev,
+    DCarouselNext,
   },
   props: {
     modelValue: {
@@ -44,15 +46,16 @@ export default defineComponent({
           {
             slots.pagination
             ? renderSlot(slots, 'pagination')
-            : <div class="devui-carousel-pagination">
-              <DCarouselPagination onPrev={() => {
+            : <>
+              <DCarouselPrev onClick={() => {
                 emit('update:modelValue', props.modelValue-1)
                 prevPage()
-              }} onNext={() => {
+              }} />
+              <DCarouselNext onClick={() => {
                 emit('update:modelValue', props.modelValue+1)
                 nextPage()
-              }}></DCarouselPagination>
-            </div>
+              }} />
+            </>
           }
           {slots.indicator ? (
             slots.indicator()

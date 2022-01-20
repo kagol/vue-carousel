@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'carousel/index.ts'),
-      name: 'vue-carousel',
+      name: 'VueCarousel',
       fileName: (format) => `vue-carousel.${format}.js`
     },
     rollupOptions: {

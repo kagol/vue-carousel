@@ -7,7 +7,9 @@
 ```vue
 <template>
   <DCarousel>
-
+    <div class="carousel-item">page 1</div>
+    <div class="carousel-item">page 2</div>
+    <div class="carousel-item">page 3</div>
   </DCarousel>
 </template>
 <style>
@@ -171,6 +173,55 @@ export default defineComponent({
 
 :::
 
+### 分页器位置
+
+:::demo
+
+```vue
+<template>
+<DCarousel v-model="pageIndex">
+  <div class="carousel-item">page 1</div>
+  <div class="carousel-item">page 2</div>
+  <div class="carousel-item">page 3</div>
+  <template #pagination>
+    <DCarouselPrev @click="prevPage" style="top: 40px; left: calc(100% - 110px);" />
+    <DCarouselNext @click="nextPage" style="top: 40px;" />
+  </template>
+</DCarousel>
+</template>
+<script>
+import { defineComponent, ref } from 'vue'
+
+function usePage(defaultPageIndex = 1) {
+  const pageIndex = ref(defaultPageIndex)
+
+  const setPageIndex = (current: number) => {
+    pageIndex.value = current
+  }
+
+  const jumpPage = (page: number) => {
+    pageIndex.value += page
+  }
+
+  const prevPage = () => jumpPage(-1)
+
+  const nextPage = () => jumpPage(1)
+
+  return { pageIndex, setPageIndex, jumpPage, prevPage, nextPage }
+}
+
+export default defineComponent({
+  setup() {
+    const { pageIndex, prevPage, nextPage } = usePage(1)
+
+    return { pageIndex, prevPage, nextPage }
+  },
+})
+</script>
+```
+
+:::
+
 ### 自定义分页器
 
 :::demo
@@ -182,7 +233,6 @@ export default defineComponent({
   <div class="carousel-item">page 2</div>
   <div class="carousel-item">page 3</div>
   <template #pagination>
-    <DCarouselPagination>
       <div class="carousel-demo-pagination-wrapper">
         <div class="btn-page" @click="prevPage">
           <svg
@@ -230,7 +280,6 @@ export default defineComponent({
           </svg>
         </div>
       </div>
-    </DCarouselPagination>
   </template>
 </DCarousel>
 </template>
@@ -581,7 +630,6 @@ export default defineComponent({
     </div>
   </template>
   <template #pagination>
-    <DCarouselPagination>
       <div class="carousel-demo-bilibili-pagination-wrapper">
        <div class="btn-page" @click="prevPage">
           <svg
@@ -629,7 +677,6 @@ export default defineComponent({
           </svg>
         </div>
       </div>
-    </DCarouselPagination>
   </template>
 </DCarousel>
 </template>
