@@ -2,7 +2,19 @@ import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 
 const sidebar = {
   "/": [
-    { text: "Carousel 走马灯", link: "/" }
+    { text: "快速开始", link: "/" },
+    {
+      text: "特性", children: [
+        { text: "掘金活动", link: "/features/juejin-events/" },
+        { text: "指示器位置", link: "/features/indicator-position/" },
+        { text: "自定义指示器", link: "/features/custom-indicator/" },
+        { text: "分页器位置", link: "/features/pagination-position/" },
+        { text: "自定义分页器", link: "/features/custom-pagination/" },
+        { text: "手风琴式折叠卡片", link: "/features/collapse-card/" },
+        { text: "华为", link: "/features/huawei-events/" },
+        { text: "B站", link: "/features/bilibili-events/" },
+      ]
+    }
   ]
 }
 
