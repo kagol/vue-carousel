@@ -5,6 +5,7 @@ const sidebar = {
     { text: "快速开始", link: "/" },
     {
       text: "特性", children: [
+        { text: "自动播放", link: "/features/autoplay/" },
         { text: "掘金活动", link: "/features/juejin-events/" },
         { text: "指示器位置", link: "/features/indicator-position/" },
         { text: "自定义指示器", link: "/features/custom-indicator/" },

@@ -1,8 +1,21 @@
-import { defineComponent, renderSlot, useSlots, watch, toRefs } from 'vue'
-import usePage from './composables/use-page'
+import { defineComponent, renderSlot, useSlots, watch, toRefs, ref } from 'vue'
+
+// Components
 import DCarouselIndicator from './components/carousel-indicator'
 import DCarouselPrev from './components/carousel-prev'
 import DCarouselNext from './components/carousel-next'
+
+// Composables
+import usePage from './composables/use-page'
+import useAutoplay from './composables/use-autoplay'
+
+// Util
+import { formatPageIndex } from './carousel.util'
+
+// Props/Types
+import { carouselProps, CarouselProps } from './carousel.type'
+
+// SCSS
 import './carousel.scss'
 
 export default defineComponent({
@@ -12,16 +25,31 @@ export default defineComponent({
     DCarouselPrev,
     DCarouselNext,
   },
-  props: {
-    modelValue: {
-      type: Number,
-    },
-  },
+  props: carouselProps,
   emits: ['update:modelValue'],
-  setup(props, { slots, emit }) {
-    const { modelValue } = toRefs(props)
+  setup(props: CarouselProps, { slots, emit }) {
+    const { modelValue, autoplay, interval } = toRefs(props)
+
     const { pageIndex, prevPage, nextPage } = usePage(1)
+    const { startPlay, stopPlay } = useAutoplay(nextPage, interval.value)
+
     const count = useSlots().default().length
+    const defaultFormattedPageIndex = formatPageIndex(pageIndex.value, count)
+    const formattedPageIndex = ref(defaultFormattedPageIndex)
+
+    const launchTimer = (autoplay) => {
+      if (autoplay) {
+        startPlay()
+      } else {
+        stopPlay()
+      }
+    }
+
+    launchTimer(autoplay.value)
+
+    watch(autoplay, (newVal) => {
+      launchTimer(newVal)
+    })
 
     watch(modelValue, (newVal: number) => {
       pageIndex.value = newVal
@@ -29,6 +57,7 @@ export default defineComponent({
 
     watch(pageIndex, (newVal: number) => {
       emit('update:modelValue', newVal)
+      formattedPageIndex.value = formatPageIndex(pageIndex.value, count)
     })
 
     return () => {
@@ -38,7 +67,7 @@ export default defineComponent({
             class="devui-carousel-item-container"
             style={{
               width: count * 100 + '%',
-              left: -(pageIndex.value - 1) * 100 + '%',
+              left: -(formattedPageIndex.value - 1) * 100 + '%',
             }}
           >
             {renderSlot(useSlots(), 'default')}
@@ -62,7 +91,7 @@ export default defineComponent({
           ) : (
             <DCarouselIndicator
               count={count}
-              v-model={pageIndex.value}
+              v-model={formattedPageIndex.value}
             ></DCarouselIndicator>
           )}
         </div>

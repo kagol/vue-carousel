@@ -1,6 +1,6 @@
 {
   "name": "vue-devui-carousel",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vue3 Carousel",
   "files": ["dist"],
   "main": "./dist/vue-carousel.umd.js",
