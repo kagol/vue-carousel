@@ -30,7 +30,7 @@ export default defineComponent({
   setup(props: CarouselProps, { slots, emit }) {
     const { modelValue, autoplay, interval } = toRefs(props)
 
-    const { pageIndex, prevPage, nextPage } = usePage(1)
+    const { pageIndex, prevPage, nextPage } = usePage(modelValue.value)
     const { startPlay, stopPlay } = useAutoplay(nextPage, interval.value)
 
     const count = useSlots().default().length

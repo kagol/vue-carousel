@@ -15,7 +15,7 @@ export default defineComponent({
   emits: ['update:modelValue'],
   setup(props, { emit, slots }) {
     const { modelValue } = toRefs(props)
-    const { pageIndex, setPageIndex } = usePage(1)
+    const { pageIndex, setPageIndex } = usePage(modelValue.value)
     const indicatorArr = Array.from(new Array(props.count).keys())
 
     watch(modelValue, (newVal: number) => {
