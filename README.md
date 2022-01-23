@@ -12,6 +12,48 @@
 </DCarousel>
 ```
 
+## 效果动图
+
+默认效果：
+
+![1-default.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/1-default.gif)
+
+掘金活动：
+
+![2-juejin.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/2-juejin.gif)
+
+指示器位置：
+
+![3-indicator-position.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/3-indicator-position.gif)
+
+自定义指示器：
+
+![4-custom-indicator.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/4-custom-indicator.gif)
+
+分页器位置：
+
+![5-pagination-position.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/5-pagination-position.gif)
+
+自定义分页器：
+
+![6-custom-pagination.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/6-custom-pagination.gif)
+
+华为官网：
+
+![7-huawei.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/7-huawei.gif)
+
+QQ音乐：
+
+![8-qqmusic.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/8-qqmusic.gif)
+
+B站：
+
+![9-bilibili.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/9-bilibili.gif)
+
+手风琴式折叠卡片：
+
+![10-collapse-card.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/10-collapse-card.gif)
+
 ## API
 
 ### DCarousel 组件
@@ -63,3 +105,6 @@ props
 | ------- | ------ | ---- | -------------- |
 | default | -- | --    | 可选，默认插槽 |
 
+参考：
+
+[用积木理论设计的Carousel组件都有哪些有趣的玩法？](https://juejin.cn/post/7056193763810476063/)

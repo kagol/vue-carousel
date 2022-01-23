@@ -52,7 +52,9 @@ export default defineComponent({
 </script>
 <style>
 .carousel-item-dark {
-  background-color: rgb(135, 164, 186);
+  text-align: center;
+  line-height: 200px;
+  background: rgb(135, 164, 186);
   color: #fff;
 }
 
