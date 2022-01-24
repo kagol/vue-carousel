@@ -33,7 +33,7 @@ export default defineComponent({
     const { pageIndex, prevPage, nextPage, setPageIndex } = usePage(modelValue.value)
     const { startPlay, stopPlay } = useAutoplay(nextPage, interval.value)
 
-    const count = useSlots().default().length
+    const count = useSlots().default().filter(item => typeof item.type !== 'symbol').length
     const defaultFormattedPageIndex = formatPageIndex(pageIndex.value, count)
     const formattedPageIndex = ref(defaultFormattedPageIndex)
 

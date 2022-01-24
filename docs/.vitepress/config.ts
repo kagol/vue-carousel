@@ -14,6 +14,7 @@ const sidebar = {
         { text: "手风琴式折叠卡片", link: "/features/collapse-card/" },
         { text: "华为", link: "/features/huawei-events/" },
         { text: "B站", link: "/features/bilibili-events/" },
+        { text: "QQ音乐", link: "/features/qqmusic/" },
       ]
     }
   ]
