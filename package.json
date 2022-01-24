@@ -1,7 +1,8 @@
 {
   "name": "vue-devui-carousel",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "Vue3 Carousel",
+  "homepage": "https://kagol.gitee.io/vue-carousel/",
   "files": ["dist"],
   "main": "./dist/vue-carousel.umd.js",
   "module": "./dist/vue-carousel.es.js",

@@ -1,8 +1,34 @@
 # Vue DevUI Carousel
 
-一个简单、灵活的`Vue3`走马灯组件，非常轻量，只有`3.9kB`。
+一个简单、灵活的`Vue3`走马灯组件，非常轻量，只有`5kB`。
 
-## 基本用法
+预览地址：
+[https://kagol.gitee.io/vue-carousel/](https://kagol.gitee.io/vue-carousel/)
+
+## 快速开始
+
+创建一个vite工程：
+
+```
+yarn create vite vite-demo --template vue-ts
+```
+
+安装`Carousel`：
+```
+yarn add vue-devui-carousel
+```
+
+在`main.ts`中引入`Carousel`：
+```
+import Carousel from 'vue-devui-carousel'
+import 'vue-devui-carousel/dist/style.css'
+
+createApp(App)
+.use(Carousel)
+.mount('#app')
+```
+
+在`App.vue`中使用：
 
 ```
 <DCarousel>
