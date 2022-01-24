@@ -20,7 +20,8 @@ const sidebar = {
 }
 
 const config = {
-  title: 'DevUI',
+  base: '/vue-carousel/',
+  title: 'Vue DevUI Carousel',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/assets/logo.svg' }],
   ],
