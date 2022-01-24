@@ -4,7 +4,7 @@
 
 ```vue
 <template>
-<DCarousel v-model="pageIndex">
+<DCarousel>
   <div>
     <div class="carousel-demo-basic">
       <img src="https://www-file.huawei.com/-/media/corp2020/home/banner/5/new-year-message-2022.jpg" />
@@ -17,30 +17,19 @@
   </div>
   <div><img src="https://www-file.huawei.com/-/media/corp2020/home/banner/5/vmall-new-year-p2-v2.jpg" /></div>
   <div><img src="https://www-file.huawei.com/-/media/corp2020/home/banner/5/p50-pocket-en.jpg" /></div>
-  <template #indicator>
+  <template #indicator="page">
     <div class="carousel-demo-indicator-wrapper">
-      <DCarouselIndicator v-model="pageIndex">
+      <DCarouselIndicator>
         <div class="carousel-demo-indicator-item-wrapper">
-          <div :class="['carousel-demo-indicator-item', pageIndex === 1 && 'active']" @click="setPageIndex(1)"></div>
-          <div :class="['carousel-demo-indicator-item', pageIndex === 2 && 'active']" @click="setPageIndex(2)"></div>
-          <div :class="['carousel-demo-indicator-item', pageIndex === 3 && 'active']" @click="setPageIndex(3)"></div>
+          <div :class="['carousel-demo-indicator-item', page.pageIndex === 1 && 'active']" @click="page.setPageIndex(1)"></div>
+          <div :class="['carousel-demo-indicator-item', page.pageIndex === 2 && 'active']" @click="page.setPageIndex(2)"></div>
+          <div :class="['carousel-demo-indicator-item', page.pageIndex === 3 && 'active']" @click="page.setPageIndex(3)"></div>
         </div>
       </DCarouselIndicator>
     </div>
   </template>
 </DCarousel>
 </template>
-<script>
-import { defineComponent, ref, getCurrentInstance } from 'vue'
-
-export default defineComponent({
-  setup() {
-    const { usePage } = getCurrentInstance().appContext.config.globalProperties
-    const { pageIndex, setPageIndex } = usePage()
-    return { pageIndex, setPageIndex }
-  }
-})
-</script>
 <style>
 .carousel-demo-basic {
   position: relative;

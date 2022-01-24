@@ -4,22 +4,22 @@
 
 ```vue
 <template>
-  <DCarouselIndicator style="position: static;">
-    <template #default="pageInfo">
+  <DCarouselIndicator>
+    <template #default="page">
     <div class="box">
-      <div :class="['panel', pageInfo.pageIndex === 1 ? 'active' : '']" @click="pageInfo.setPageIndex(1)">
+      <div :class="['panel', page.pageIndex === 1 ? 'active' : '']" @click="page.setPageIndex(1)">
         <h3>Explore The World</h3>
       </div>
-      <div :class="['panel', pageInfo.pageIndex === 2 ? 'active' : '']" @click="pageInfo.setPageIndex(2)">
+      <div :class="['panel', page.pageIndex === 2 ? 'active' : '']" @click="page.setPageIndex(2)">
         <h3>Wild Forest</h3>
       </div>
-      <div :class="['panel', pageInfo.pageIndex === 3 ? 'active' : '']" @click="pageInfo.setPageIndex(3)">
+      <div :class="['panel', page.pageIndex === 3 ? 'active' : '']" @click="page.setPageIndex(3)">
         <h3>Sunny Beach</h3>
       </div>
-      <div :class="['panel', pageInfo.pageIndex === 4 ? 'active' : '']" @click="pageInfo.setPageIndex(4)">
+      <div :class="['panel', page.pageIndex === 4 ? 'active' : '']" @click="page.setPageIndex(4)">
         <h3>City on Winter</h3>
       </div>
-      <div :class="['panel', pageInfo.pageIndex === 5 ? 'active' : '']" @click="pageInfo.setPageIndex(5)">
+      <div :class="['panel', page.pageIndex === 5 ? 'active' : '']" @click="page.setPageIndex(5)">
         <h3>Mountains - Clouds</h3>
       </div>
     </div>

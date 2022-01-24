@@ -4,32 +4,30 @@
 
 ```vue
 <template>
-  <DCarousel v-model="pageIndex">
-    <div class="carousel-item carousel-item-dark">page 1</div>
-    <div class="carousel-item carousel-item-dark">page 2</div>
-    <div class="carousel-item carousel-item-dark">page 3</div>
-    <template #indicator>
-      <DCarouselIndicator :count="3" v-model="pageIndex" style="justify-content: flex-start; padding-left: 20px;">
+  <DCarousel>
+    <div class="carousel-item-dark">page 1</div>
+    <div class="carousel-item-dark">page 2</div>
+    <div class="carousel-item-dark">page 3</div>
+    <template #indicator="page">
+      <DCarouselIndicator :count="page.count" v-model="page.pageIndex" style="justify-content: flex-start; padding-left: 20px;">
         <div
-          :class="['carousel-indicator-item', pageIndex === item+1 ? 'active' : '']"
+          :class="['carousel-indicator-item', page.pageIndex === item+1 ? 'active' : '']"
           v-for="item of indicatorArr"
           :key="item"
-          @click="setPageIndex(item+1)"
+          @click="page.setPageIndex(item+1)"
         ></div>
       </DCarouselIndicator>
     </template>
   </DCarousel>
 </template>
 <script>
-import { defineComponent, ref, getCurrentInstance } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {
-    const { usePage } = getCurrentInstance().appContext.config.globalProperties
-    const { pageIndex, setPageIndex } = usePage(1)
     const indicatorArr = Array.from(new Array(3).keys())
 
-    return { pageIndex, setPageIndex, indicatorArr }
+    return { indicatorArr }
   },
 })
 </script>

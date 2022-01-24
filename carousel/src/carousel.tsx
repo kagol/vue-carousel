@@ -30,7 +30,7 @@ export default defineComponent({
   setup(props: CarouselProps, { slots, emit }) {
     const { modelValue, autoplay, interval } = toRefs(props)
 
-    const { pageIndex, prevPage, nextPage } = usePage(modelValue.value)
+    const { pageIndex, prevPage, nextPage, setPageIndex } = usePage(modelValue.value)
     const { startPlay, stopPlay } = useAutoplay(nextPage, interval.value)
 
     const count = useSlots().default().length
@@ -74,8 +74,9 @@ export default defineComponent({
           </div>
           {
             slots.pagination
-            ? renderSlot(slots, 'pagination')
-            : <>
+            ? renderSlot(useSlots(), 'pagination', {
+              prevPage, nextPage
+            }) : <>
               <DCarouselPrev onClick={() => {
                 emit('update:modelValue', props.modelValue-1)
                 prevPage()
@@ -87,7 +88,11 @@ export default defineComponent({
             </>
           }
           {slots.indicator ? (
-            slots.indicator()
+            slots.indicator({
+              count,
+              pageIndex: pageIndex.value,
+              setPageIndex
+            })
           ) : (
             <DCarouselIndicator
               count={count}

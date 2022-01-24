@@ -4,26 +4,15 @@
 
 ```vue
 <template>
-  <DCarousel v-model="pageIndex">
+  <DCarousel>
     <div class="carousel-item">page 1</div>
     <div class="carousel-item">page 2</div>
     <div class="carousel-item">page 3</div>
-    <template #indicator>
-      <DCarouselIndicator :count="3" v-model="pageIndex" style="justify-content: flex-start; padding-left: 20px;"></DCarouselIndicator>
+    <template #indicator="page">
+      <DCarouselIndicator :count="page.count" v-model="page.pageIndex" style="justify-content: flex-start; padding-left: 20px;"></DCarouselIndicator>
     </template>
   </DCarousel>
 </template>
-<script>
-import { defineComponent, ref, getCurrentInstance} from 'vue'
-
-export default defineComponent({
-  setup() {
-    const { usePage } = getCurrentInstance().appContext.config.globalProperties
-    const { pageIndex, setPageIndex } = usePage(1)
-    return { pageIndex, setPageIndex }
-  },
-})
-</script>
 <style>
 .carousel-item {
   text-align: center;

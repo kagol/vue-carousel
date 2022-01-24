@@ -5,7 +5,7 @@
 
 ```vue
 <template>
-<DCarousel v-model="pageIndex" class="carousel-demo-bilibili">
+<DCarousel class="carousel-demo-bilibili">
   <div>
     <div class="carousel-demo-item-bilibili">
       <img src = 'https://s3.bmp.ovh/imgs/2022/01/40f0a4406ac09295.png' />
@@ -51,88 +51,32 @@
       <div class="carousel-tool not-gray" data-gray="122" style="color:white;"><a href="https://www.bilibili.com/blackboard/activity-gamereview2021.html" rel="noopener" target="_blank" data-target-url="https://www.bilibili.com/blackboard/activity-gamereview2021.html"><span>用视频的方式，记录新年！</span></a></div>
     </div>
   </div>
-  <template #indicator>
+  <template #indicator="page">
     <div class="carousel-demo-bilibili-indicator-wrapper">
-      <DCarouselIndicator v-model="pageIndex" style="justify-content: flex-start;">
+      <DCarouselIndicator style="justify-content: flex-start;">
         <div class="carousel-demo-bilibili-indicator-item-wrapper">
-          <div :class="['carousel-demo-bilibili-indicator-item', pageIndex === 1 && 'active']" @click="setPageIndex(1)"></div>
-          <div :class="['carousel-demo-bilibili-indicator-item', pageIndex === 2 && 'active']" @click="setPageIndex(2)"></div>
-          <div :class="['carousel-demo-bilibili-indicator-item', pageIndex === 3 && 'active']" @click="setPageIndex(3)"></div>
-          <div :class="['carousel-demo-bilibili-indicator-item', pageIndex === 4 && 'active']" @click="setPageIndex(4)"></div>
-          <div :class="['carousel-demo-bilibili-indicator-item', pageIndex === 5 && 'active']" @click="setPageIndex(5)"></div>
-          <div :class="['carousel-demo-bilibili-indicator-item', pageIndex === 6 && 'active']" @click="setPageIndex(6)"></div>
+          <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 1 && 'active']" @click="page.setPageIndex(1)"></div>
+          <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 2 && 'active']" @click="page.setPageIndex(2)"></div>
+          <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 3 && 'active']" @click="page.setPageIndex(3)"></div>
+          <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 4 && 'active']" @click="page.setPageIndex(4)"></div>
+          <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 5 && 'active']" @click="page.setPageIndex(5)"></div>
+          <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 6 && 'active']" @click="page.setPageIndex(6)"></div>
         </div>
       </DCarouselIndicator>
     </div>
   </template>
-  <template #pagination>
+  <template #pagination="page">
       <div class="carousel-demo-bilibili-pagination-wrapper">
-       <div class="btn-page" @click="prevPage">
-          <svg
-            width="18px"
-            height="18px"
-            viewBox="0 0 16 16"
-            version="1.1"
-          >
-            <g
-
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-            >
-              <polygon
-          
-                fill="#293040"
-                fill-rule="nonzero"
-                points="10.7071068 12.2928932 9.29289322 13.7071068 3.58578644 8 9.29289322 2.29289322 10.7071068 3.70710678 6.41421356 8"
-              ></polygon>
-            </g>
-          </svg>
+       <div class="btn-page" @click="page.prevPage">
+          <svg width="18px" height="18px" viewBox="0 0 16 16" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon fill="#293040" fill-rule="nonzero" points="10.7071068 12.2928932 9.29289322 13.7071068 3.58578644 8 9.29289322 2.29289322 10.7071068 3.70710678 6.41421356 8"></polygon></g></svg>
         </div>
-        <div class="btn-page" @click="nextPage">
-          <svg
-            width="18px"
-            height="18px"
-            viewBox="0 0 16 16"
-            version="1.1"
-          >
-            <g
-              stroke="none"
-              stroke-width="1"
-              fill="none"
-              fill-rule="evenodd"
-            >
-              <polygon
-                fill="#293040"
-                fill-rule="nonzero"
-                transform="translate(8.146447, 8.000000) scale(-1, 1) translate(-8.146447, -8.000000) "
-                points="11.7071068 12.2928932 10.2928932 13.7071068 4.58578644 8 10.2928932 2.29289322 11.7071068 3.70710678 7.41421356 8"
-              ></polygon>
-            </g>
-          </svg>
+        <div class="btn-page" @click="page.nextPage">
+          <svg width="18px" height="18px" viewBox="0 0 16 16" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon fill="#293040" fill-rule="nonzero" transform="translate(8.146447, 8.000000) scale(-1, 1) translate(-8.146447, -8.000000)" points="11.7071068 12.2928932 10.2928932 13.7071068 4.58578644 8 10.2928932 2.29289322 11.7071068 3.70710678 7.41421356 8"></polygon></g></svg>
         </div>
       </div>
   </template>
 </DCarousel>
 </template>
-<script>
-import { defineComponent, ref, getCurrentInstance } from 'vue'
-
-export default defineComponent({
-  setup() {
-    const { usePage } = getCurrentInstance().appContext.config.globalProperties
-    const { pageIndex, prevPage, nextPage, setPageIndex } = usePage(1)
-
-    return {
-      pageIndex,
-      prevPage,
-      nextPage,
-      setPageIndex,
-    }
-  }
-})
-</script>
 <style>
 .carousel-demo-bilibili {
   width: 600px;
