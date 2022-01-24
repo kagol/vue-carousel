@@ -15,28 +15,11 @@
 </DCarousel>
 </template>
 <script>
-import { defineComponent, ref } from 'vue'
-
-function usePage(defaultPageIndex = 1) {
-  const pageIndex = ref(defaultPageIndex)
-
-  const setPageIndex = (current: number) => {
-    pageIndex.value = current
-  }
-
-  const jumpPage = (page: number) => {
-    pageIndex.value += page
-  }
-
-  const prevPage = () => jumpPage(-1)
-
-  const nextPage = () => jumpPage(1)
-
-  return { pageIndex, setPageIndex, jumpPage, prevPage, nextPage }
-}
+import { defineComponent, ref, getCurrentInstance } from 'vue'
 
 export default defineComponent({
   setup() {
+    const { usePage } = getCurrentInstance().appContext.config.globalProperties
     const { pageIndex, prevPage, nextPage } = usePage(1)
 
     return { pageIndex, prevPage, nextPage }

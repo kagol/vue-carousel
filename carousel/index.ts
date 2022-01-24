@@ -13,5 +13,6 @@ export default {
     app.component(DCarouselIndicator.name, DCarouselIndicator)
     app.component(DCarouselPrev.name, DCarouselPrev)
     app.component(DCarouselNext.name, DCarouselNext)
+    app.config.globalProperties.usePage = usePage
   }
 }
