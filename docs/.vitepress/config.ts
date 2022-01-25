@@ -15,6 +15,7 @@ const sidebar = {
         { text: "华为", link: "/features/huawei-events/" },
         { text: "B站", link: "/features/bilibili-events/" },
         { text: "QQ音乐", link: "/features/qqmusic/" },
+        { text: "LeetCode", link: "/features/leetcode-card/" },
       ]
     }
   ]
@@ -33,7 +34,9 @@ const config = {
   markdown: {
     config: (md) => {
       // 这里可以使用 markdown-it 插件，vitepress-theme-demoblock就是基于此开发的
-      md.use(demoBlockPlugin)
+      md.use(demoBlockPlugin, {
+        cssPreprocessor: 'scss'
+      })
     }
   }
 }
