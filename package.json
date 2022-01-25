@@ -12,10 +12,11 @@
     "build:lib": "vue-tsc --noEmit && vite build --config vite.config.lib.ts",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs && cp docs/assets/* docs/.vitepress/dist/assets",
+    "docs:build": "vitepress build docs && yarn copy:assets",
     "docs:preview": "vitepress preview docs",
     "register:components": "vitepress-rc",
-    "test": "jest"
+    "test": "jest",
+    "copy:assets": "cp docs/assets/* docs/.vitepress/dist/assets"
   },
   "author": "Kagol <kagol@sina.com>",
   "license": "MIT",
