@@ -5,6 +5,7 @@
 ```vue
 <template>
   <button @click="play">{{text}}</button>
+  <br><br>
   <DCarousel :autoplay="autoplay" :interval="1000">
     <div class="carousel-item">page 1</div>
     <div class="carousel-item">page 2</div>

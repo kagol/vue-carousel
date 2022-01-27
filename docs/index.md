@@ -1,6 +1,27 @@
 # 快速开始
 
-:::demo `Carousel`组件提供了默认插槽，直接将元素放在`<DCarousel>`即可实现轮播效果。
+创建一个vite工程：
+
+```
+yarn create vite vite-demo --template vue-ts
+```
+
+安装`Carousel`：
+```
+yarn add vue-devui-carousel
+```
+
+在`main.ts`中引入`Carousel`：
+```
+import Carousel from 'vue-devui-carousel'
+import 'vue-devui-carousel/dist/style.css'
+
+createApp(App)
+.use(Carousel)
+.mount('#app')
+```
+
+在`App.vue`中使用：
 
 ```vue
 <template>
@@ -19,4 +40,55 @@
 </style>
 ```
 
-:::
+### API
+
+<br>
+
+#### DCarousel 组件
+
+props
+
+| 属性    | 类型   | 默认 | 说明           |
+| ------- | ------ | ---- | -------------- |
+| v-model | Number | 1    | 可选，当前页码 |
+| autoplay | Boolean | true    | 可选，是否自动播放 |
+| interval | Number | 3000    | 可选，自动播放的时间间隔，单位是毫秒 |
+
+插槽
+
+| 属性    | 类型   | 默认 | 说明           |
+| ------- | ------ | ---- | -------------- |
+| default | -- | --    | 必选，默认插槽 |
+| indicator | -- | --    | 可选，指示器插槽 |
+| pagination | -- | --    | 可选，分页器插槽 |
+
+#### DCarouselIndicator 组件
+
+props
+
+| 属性    | 类型   | 默认 | 说明           |
+| ------- | ------ | ---- | -------------- |
+| v-model | Number | 1    | 可选，当前页码 |
+| count | Number | --    | 可选，指示器元素数量 |
+
+插槽
+
+| 属性    | 类型   | 默认 | 说明           |
+| ------- | ------ | ---- | -------------- |
+| default | ({ pageIndex, setPageIndex }) => {} | --    | 可选，默认插槽 |
+
+#### DCarouselPrev 组件
+
+插槽
+
+| 属性    | 类型   | 默认 | 说明           |
+| ------- | ------ | ---- | -------------- |
+| default | -- | --    | 可选，默认插槽 |
+
+#### DCarouselNext 组件
+
+插槽
+
+| 属性    | 类型   | 默认 | 说明           |
+| ------- | ------ | ---- | -------------- |
+| default | -- | --    | 可选，默认插槽 |
