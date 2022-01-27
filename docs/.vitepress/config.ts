@@ -22,14 +22,19 @@ const sidebar = {
   ]
 }
 
+const nav = [
+  { text: 'Github', link: 'https://github.com/kagol/vue-carousel' }
+]
+
 const config = {
   base: '/vue-carousel/',
-  title: 'Vue DevUI Carousel',
+  title: 'Vue Carousel',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/assets/logo.svg' }],
   ],
   themeConfig: {
     sidebar,
+    nav,
     logo: '/assets/logo.svg',
   },
   markdown: {
