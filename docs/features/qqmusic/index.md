@@ -20,7 +20,7 @@
         <div class="playlist__item_box"><div class="playlist__cover mod_cover"><a href="/n/ryqq/playlist/8175037786"><img class="playlist__pic" loading="lazy" src="//qpic.y.qq.com/music_cover/W43yJLl09jro4gLJXBxMR1PKp3oH0yfqaWZsCjgJEFCxCAMhx5XdGA/300?n=1" alt="追星名场面 | 一人一首偶像曲" data-qar-def="//y.qq.com/mediastyle/global/img/playlist_300.png?max_age=2592000"><i class="mod_cover__mask"></i><i class="mod_cover__icon_play"></i></a></div><h4 class="playlist__title"><span class="playlist__title_txt"><a href="/n/ryqq/playlist/8175037786">追星名场面 | 一人一首偶像曲</a></span></h4><div class="playlist__other">播放量：35.2万</div></div>
       </div>
       <div class="playlist__item">
-        <div class="playlist__item_box"><div class="playlist__cover mod_cover"><a href="/n/ryqq/playlist/7845656497"><img class="playlist__pic" loading="lazy" src="//qpic.y.qq.com/music_cover/tzTIee65HohmgERhaae4MdXH1NnSAicACibx3A81TpOj14Qheibiajcic0O13hk2qnCd3/300?n=1" alt="『甜度100%』我瞒着所有人在想你" data-qar-def="//y.qq.com/mediastyle/global/img/playlist_300.png?max_age=2592000"><i class="mod_cover__mask"></i><i class="mod_cover__icon_play"></i></a></div><h4 class="playlist__title"><span class="playlist__title_txt"><a href="/n/ryqq/playlist/7845656497">『甜度100%』我瞒着所有人在想你</a></span></h4><div class="playlist__other">播放量：136.3万</div></div>
+        <div class="playlist__item_box"><div class="playlist__cover mod_cover"><a href="/n/ryqq/playlist/7845656497"><img class="playlist__pic" loading="lazy" src="//qpic.y.qq.com/music_cover/tzTIee65HohmgERhaae4MdXH1NnSAicACibx3A81TpOj14Qheibiajcic0O13hk2qnCd3/300?n=1" alt="『甜度100%』我瞒着所有人在想你" data-qar-def="//y.qq.com/mediastyle/global/img/playlist_300.png?max_age=2592000"><i class="mod_cover__mask"></i><i class="mod_cover__icon_play"></i></a></div><h4 class="playlist__title"><span class="playlist__title_txt"><a href="/n/ryqq/playlist/7845656497">甜度100%｜我瞒着所有人在想你</a></span></h4><div class="playlist__other">播放量：136.3万</div></div>
       </div>
     </div>
     <div class="mod_playlist">
@@ -79,10 +79,6 @@ a {
     margin-right: 20px;
 }
 
-.playlist__item:nth-child(5) .playlist__item_box {
-    margin-right: 0;
-}
-
 .playlist__cover {
     position: relative;
     display: block;
@@ -124,6 +120,7 @@ a {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    font-size: 14px;
 }
 
 .playlist__title_txt {
@@ -143,6 +140,10 @@ a {
     text-overflow: ellipsis;
     height: 22px;
     font-size: 14px;
+}
+
+.mod_playlist {
+  margin-left: 110px;
 }
 </style>
 ```

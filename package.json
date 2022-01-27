@@ -1,6 +1,6 @@
 {
   "name": "vue-devui-carousel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue3 Carousel",
   "homepage": "https://kagol.gitee.io/vue-carousel/",
   "files": ["dist"],

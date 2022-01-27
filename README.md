@@ -42,43 +42,43 @@ createApp(App)
 
 默认效果：
 
-![1-default.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/1-default.gif)
+![1-default.gif](https://pic.imgdb.cn/item/61f2b4932ab3f51d9107f30c.gif)
 
 掘金活动：
 
-![2-juejin.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/2-juejin.gif)
+![2-juejin.gif](https://pic.imgdb.cn/item/61f2b4932ab3f51d9107f315.gif)
 
 指示器位置：
 
-![3-indicator-position.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/3-indicator-position.gif)
+![3-indicator-position.gif](https://pic.imgdb.cn/item/61f2b4932ab3f51d9107f31c.gif)
 
 自定义指示器：
 
-![4-custom-indicator.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/4-custom-indicator.gif)
+![4-custom-indicator.gif](https://pic.imgdb.cn/item/61f2b4932ab3f51d9107f325.gif)
 
 分页器位置：
 
-![5-pagination-position.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/5-pagination-position.gif)
+![5-pagination-position.gif](https://pic.imgdb.cn/item/61f2b4932ab3f51d9107f32f.gif)
 
 自定义分页器：
 
-![6-custom-pagination.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/6-custom-pagination.gif)
+![6-custom-pagination.gif](https://pic.imgdb.cn/item/61f2b5282ab3f51d9108b5ef.gif)
 
 华为官网：
 
-![7-huawei.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/7-huawei.gif)
+![7-huawei.gif](https://pic.imgdb.cn/item/61f2b7bb2ab3f51d910d4651.gif)
 
 QQ音乐：
 
-![8-qqmusic.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/8-qqmusic.gif)
+![8-qqmusic.gif](https://pic.imgdb.cn/item/61f2bb5d2ab3f51d91146170.gif)
 
 B站：
 
-![9-bilibili.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/9-bilibili.gif)
+![9-bilibili.gif](https://pic.imgdb.cn/item/61f2b85e2ab3f51d910e65ab.gif)
 
 手风琴式折叠卡片：
 
-![10-collapse-card.gif](https://unpkg.com/vue-devui-carousel@0.0.9/dist/10-collapse-card.gif)
+![10-collapse-card.gif](https://pic.imgdb.cn/item/61f2b6f42ab3f51d910bc018.gif)
 
 ## API
 
