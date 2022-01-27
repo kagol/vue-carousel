@@ -9,7 +9,7 @@
     <div class="carousel-item">page 2</div>
     <div class="carousel-item">page 3</div>
     <template #indicator="page">
-      <DCarouselIndicator :count="page.count" v-model="page.pageIndex" style="justify-content: flex-start; padding-left: 20px;"></DCarouselIndicator>
+      <DCarouselIndicator :count="page.count" v-model="page.pageIndex" @update:modelValue="page.setPageIndex" style="justify-content: flex-start; padding-left: 20px;"></DCarouselIndicator>
     </template>
   </DCarousel>
 </template>
