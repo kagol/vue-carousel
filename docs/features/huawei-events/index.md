@@ -7,16 +7,16 @@
 <DCarousel>
   <div>
     <div class="carousel-demo-basic">
-      <img src="https://www-file.huawei.com/-/media/corp2020/home/banner/5/new-year-message-2022.jpg" />
+      <img src="https://pic.imgdb.cn/item/61f2ae9a2ab3f51d91000f53.jpg" />
       <div class="carousel-demo-basic-content">
         <h3>前行不辍，未来可期</h3>
         <p>华为轮值董事长郭平新年致辞</p>
-        <a class="btn-more" href="/cn/special-release/new-year-message-2022?ic_medium=hwdc&amp;ic_source=corp_banner1_newyearmessage2022" onclick="ga('send', 'event', 'corp_hp_clicks', 'banner1', 'newyearmessage2022');" target="_blank" rel="noopener">了解更多</a>
+        <a class="btn-more" href="https://huawei.com/cn/special-release/new-year-message-2022?ic_medium=hwdc&amp;ic_source=corp_banner1_newyearmessage2022" onclick="ga('send', 'event', 'corp_hp_clicks', 'banner1', 'newyearmessage2022');" target="_blank" rel="noopener">了解更多</a>
       </div>
     </div>
   </div>
-  <div><img src="https://www-file.huawei.com/-/media/corp2020/home/banner/5/vmall-new-year-p2-v2.jpg" /></div>
-  <div><img src="https://www-file.huawei.com/-/media/corp2020/home/banner/5/p50-pocket-en.jpg" /></div>
+  <div><img src="https://pic.imgdb.cn/item/61f2ae9a2ab3f51d91000f5e.jpg" /></div>
+  <div><img src="https://pic.imgdb.cn/item/61f2ae9a2ab3f51d91000f57.jpg" /></div>
   <template #indicator="page">
     <div class="carousel-demo-indicator-wrapper">
       <DCarouselIndicator>
