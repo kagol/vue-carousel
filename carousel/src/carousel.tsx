@@ -90,7 +90,7 @@ export default defineComponent({
           {slots.indicator ? (
             slots.indicator({
               count,
-              pageIndex: pageIndex.value,
+              pageIndex: formattedPageIndex.value,
               setPageIndex
             })
           ) : (

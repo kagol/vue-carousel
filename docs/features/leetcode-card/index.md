@@ -13,7 +13,7 @@
     <template #pagination></template>
     <template #indicator="page">
       <DCarouselIndicator>
-        <div v-for="item of Array.from(new Array(3).keys())" :class="['leetcode-indicator-item', page.pageIndex === item && 'active']" @click="page.setPageIndex(item)"></div>
+        <div v-for="item of Array.from(new Array(3).keys())" :class="['leetcode-indicator-item', page.pageIndex === item+1 && 'active']" @click="page.setPageIndex(item+1)"></div>
       </DCarouselIndicator>
     </template>
   </DCarousel>
@@ -65,7 +65,7 @@
     <template #pagination></template>
     <template #indicator="page">
       <DCarouselIndicator>
-        <div v-for="item of Array.from(new Array(3).keys())" :class="['leetcode-indicator-item', page.pageIndex === item && 'active']" @click="page.setPageIndex(item)"></div>
+        <div v-for="item of Array.from(new Array(3).keys())" :class="['leetcode-indicator-item', page.pageIndex === item+1 && 'active']" @click="page.setPageIndex(item+1)"></div>
       </DCarouselIndicator>
     </template>
   </DCarousel>
