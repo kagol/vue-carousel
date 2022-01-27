@@ -1,0 +1,38 @@
+{
+  "name": "vue-devui-carousel",
+  "version": "0.1.1",
+  "description": "Vue3 Carousel",
+  "homepage": "https://kagol.gitee.io/vue-carousel/",
+  "files": ["dist"],
+  "main": "./dist/vue-carousel.umd.js",
+  "module": "./dist/vue-carousel.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:lib": "vue-tsc --noEmit && vite build --config vite.config.lib.ts",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs && yarn copy:assets",
+    "docs:preview": "vitepress preview docs",
+    "register:components": "vitepress-rc",
+    "test": "jest",
+    "copy:assets": "cp docs/assets/* docs/.vitepress/dist/assets"
+  },
+  "author": "Kagol <kagol@sina.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vitejs/plugin-vue-jsx": "^1.3.3",
+    "@vue/test-utils": "^1.3.0",
+    "jest": "^27.4.7",
+    "sass": "^1.47.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vitepress": "^0.21.4",
+    "vitepress-theme-demoblock": "^1.4.2",
+    "vue-tsc": "^0.29.8"
+  }
+}

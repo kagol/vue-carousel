@@ -1,0 +1,22 @@
+.devui-carousel-indicator {
+  display: flex;
+  position: relative;
+  bottom: 12px;
+  justify-content: center;
+  width: 100%;
+
+  .devui-carousel-indicator-item {
+    cursor: pointer;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    background: var(--devui-icon-fill, #d3d5d9);
+
+    &.active {
+      width: 24px;
+      background: var(--devui-list-item-active-bg, #5e7ce0);
+      transition: all var(--devui-animation-duration-slow, .3s) var(--devui-animation-ease-in-smooth, cubic-bezier(.645, .045, .355, 1));
+    }
+  }
+}
