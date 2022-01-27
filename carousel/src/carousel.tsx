@@ -60,6 +60,10 @@ export default defineComponent({
       formattedPageIndex.value = formatPageIndex(pageIndex.value, count)
     })
 
+    watch(formattedPageIndex, (newVal: number) => {
+      pageIndex.value = newVal
+    })
+
     return () => {
       return (
         <div class="devui-carousel">
