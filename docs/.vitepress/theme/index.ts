@@ -3,6 +3,7 @@ import DCarousel from '../../../carousel'
 
 import { registerComponents } from './register-components.js'
 import 'vitepress-theme-demoblock/theme/styles/index.css'
+import './index.scss'
 
 export default {
   ...Theme,

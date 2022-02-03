@@ -1,4 +1,5 @@
 import { defineComponent, renderSlot, useSlots, watch, toRefs, ref } from 'vue'
+import { usePage } from 'vueuse-components'
 
 // Components
 import DCarouselIndicator from './components/carousel-indicator'
@@ -6,7 +7,6 @@ import DCarouselPrev from './components/carousel-prev'
 import DCarouselNext from './components/carousel-next'
 
 // Composables
-import usePage from './composables/use-page'
 import useAutoplay from './composables/use-autoplay'
 
 // Util

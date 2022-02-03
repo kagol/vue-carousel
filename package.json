@@ -3,7 +3,9 @@
   "version": "0.1.1",
   "description": "Vue3 Carousel",
   "homepage": "https://kagol.gitee.io/vue-carousel/",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/vue-carousel.umd.js",
   "module": "./dist/vue-carousel.es.js",
   "scripts": {
@@ -21,7 +23,8 @@
   "author": "Kagol <kagol@sina.com>",
   "license": "MIT",
   "dependencies": {
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vueuse-components": "^0.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",

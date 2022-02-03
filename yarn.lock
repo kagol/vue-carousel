@@ -4214,6 +4214,13 @@ vue@^3.2.1, vue@^3.2.25, vue@^3.2.26:
     "@vue/server-renderer" "3.2.26"
     "@vue/shared" "3.2.26"
 
+vueuse-components@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vueuse-components/-/vueuse-components-0.0.1.tgz#fa2359f145f79c8d3ce7d72e32e4c0f21708ca8f"
+  integrity sha512-VaodJj28CTwBEuUdAYkx2qmgUI18AnVrzu7gjwCfVSfnuUoQZDF33px9WNdbmEKpoUGXbhVDM1j/kv3xVcAlKQ==
+  dependencies:
+    vue "^3.2.25"
+
 w3c-hr-time@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.2.tgz#0a89cdf5cc15822df9c360543676963e0cc308cd"
