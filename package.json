@@ -1,6 +1,6 @@
 {
-  "name": "vue-devui-carousel",
-  "version": "0.1.1",
+  "name": "@kagol/vue-carousel",
+  "version": "0.0.1",
   "description": "Vue3 Carousel",
   "homepage": "https://kagol.gitee.io/vue-carousel/",
   "files": [
@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build:lib": "vue-tsc --noEmit && vite build --config vite.config.lib.ts",
+    "build:lib": "vite build --config vite.config.lib.ts",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs && yarn copy:assets",
