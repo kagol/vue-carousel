@@ -1,5 +1,6 @@
 import { defineComponent, toRefs, watch } from 'vue'
-import { usePage } from 'vueuse-components'
+// import { usePage } from 'vueuse-components'
+import usePage from '../composables/use-page'
 import './carousel-indicator.scss'
 
 export default defineComponent({

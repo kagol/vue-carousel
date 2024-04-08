@@ -1,6 +1,8 @@
 # 自定义指示器
 
-:::demo 如果`Carousel`内置的`CarouselIndicator`指示器不满足你的要求，还可以定制自己的指示器。
+如果`Carousel`内置的`CarouselIndicator`指示器不满足你的要求，还可以定制自己的指示器。
+
+:::demo
 
 ```vue
 <template>

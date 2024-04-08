@@ -1,5 +1,6 @@
 import { App } from 'vue'
-import { usePage } from 'vueuse-components'
+// import { usePage } from 'vueuse-components'
+import usePage from './src/composables/use-page'
 import DCarousel from './src/carousel'
 import DCarouselIndicator from './src/components/carousel-indicator'
 import DCarouselPrev from './src/components/carousel-prev'

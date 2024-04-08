@@ -1,6 +1,8 @@
 ### 手风琴式折叠卡片
 
-:::demo `DCarouselIndicator`指示器组件提供了默认插槽，可以单独使用它实现自定义指示器效果，比如手风琴式折叠卡片。
+`DCarouselIndicator`指示器组件提供了默认插槽，可以单独使用它实现自定义指示器效果，比如手风琴式折叠卡片。
+
+:::demo
 
 ```vue
 <template>

@@ -2,7 +2,9 @@
 
 ### 首页轮播
 
-:::demo `DCarousel`和`DCarouselIndicator`组合使用，可以很方便地实现 LeetCode 的卡片轮播效果。
+`DCarousel`和`DCarouselIndicator`组合使用，可以很方便地实现 LeetCode 的卡片轮播效果。
+
+:::demo
 
 ```vue
 <template>

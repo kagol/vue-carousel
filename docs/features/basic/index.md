@@ -1,6 +1,10 @@
 # 基本用法
 
-:::demo `Carousel`组件提供了默认插槽，直接将元素放在`<DCarousel>`即可实现轮播效果。
+
+`Carousel`组件提供了默认插槽，直接将元素放在`<DCarousel>`即可实现轮播效果。
+
+:::demo
+
 
 ```vue
 <template>

@@ -1,5 +1,6 @@
 import { defineComponent, renderSlot, useSlots, watch, toRefs, ref } from 'vue'
-import { usePage } from 'vueuse-components'
+// import { usePage } from 'vueuse-components'
+import usePage from './composables/use-page'
 
 // Components
 import DCarouselIndicator from './components/carousel-indicator'
