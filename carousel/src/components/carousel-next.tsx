@@ -11,7 +11,7 @@ export default defineComponent({
           slots.default
           ? renderSlot(slots, 'default')
           : <>
-            <div class="devui-arrow devui-arrow-right" {...attrs}>
+            <div class="xui-arrow xui-arrow-right" {...attrs}>
               <DArrowRight />
             </div>
           </>

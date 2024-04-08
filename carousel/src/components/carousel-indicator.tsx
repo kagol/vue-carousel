@@ -27,7 +27,7 @@ export default defineComponent({
     })
     
     return () => {
-      return <div class="devui-carousel-indicator">
+      return <div class="xui-carousel-indicator">
         {
           slots.default
           ? slots.default({
@@ -35,7 +35,7 @@ export default defineComponent({
             setPageIndex
           })
           : indicatorArr.map((item, index) => {
-            return <div class={`devui-carousel-indicator-item${pageIndex.value === index+1 ? ' active' : ''}`} onClick={() => setPageIndex(index + 1)}></div>
+            return <div class={`xui-carousel-indicator-item${pageIndex.value === index+1 ? ' active' : ''}`} onClick={() => setPageIndex(index + 1)}></div>
           })
         }
       </div>

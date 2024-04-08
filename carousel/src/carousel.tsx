@@ -66,9 +66,9 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class="devui-carousel">
+        <div class="xui-carousel">
           <div
-            class="devui-carousel-item-container"
+            class="xui-carousel-item-container"
             style={{
               width: count * 100 + '%',
               left: -(formattedPageIndex.value - 1) * 100 + '%',

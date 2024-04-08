@@ -8,13 +8,13 @@ yarn create vite vite-demo --template vue-ts
 
 安装`Carousel`：
 ```
-yarn add vue-devui-carousel
+yarn add @kagol/vue-carousel
 ```
 
 在`main.ts`中引入`Carousel`：
 ```
-import Carousel from 'vue-devui-carousel'
-import 'vue-devui-carousel/dist/style.css'
+import Carousel from '@kagol/vue-carousel'
+import '@kagol/vue-carousel/dist/style.css'
 
 createApp(App)
 .use(Carousel)

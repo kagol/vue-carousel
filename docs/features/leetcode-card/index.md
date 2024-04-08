@@ -23,11 +23,11 @@
   width: 258px;
   border-radius: 8px;
 
-  &:hover .devui-carousel-indicator {
+  &:hover .xui-carousel-indicator {
     transform: scale(1.6);
   }
 
-  .devui-carousel-indicator {
+  .xui-carousel-indicator {
     transition: all 0.3s ease 0s;
   }
 
@@ -75,11 +75,11 @@
   width: 490px;
   border-radius: 8px;
 
-  &:hover .devui-carousel-indicator {
+  &:hover .xui-carousel-indicator {
     transform: scale(1.6);
   }
 
-  .devui-carousel-indicator {
+  .xui-carousel-indicator {
     transition: all 0.3s ease 0s;
   }
 

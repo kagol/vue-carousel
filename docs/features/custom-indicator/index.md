@@ -46,7 +46,7 @@ export default defineComponent({
   height: 8px;
   margin: 4px;
   border-radius: 50%;
-  background-color: var(--devui-icon-fill, #d3d5d9);
+  background-color: var(--xui-icon-fill, #d3d5d9);
   overflow: hidden;
   cursor: pointer;
 }

@@ -1,13 +1,13 @@
-.devui-carousel {
+.xui-carousel {
   position: relative;
   overflow: hidden;
 
-  .devui-carousel-indicator {
+  .xui-carousel-indicator {
     position: absolute;
   }
 }
 
-.devui-carousel-item-container {
+.xui-carousel-item-container {
   display: flex;
   position: relative;
   transition: left 500ms ease 0s; // 内容切换时的动效
@@ -17,7 +17,7 @@
   }
 }
 
-.devui-arrow {
+.xui-arrow {
   position: absolute;
   top: 50%;
   margin-top: -18px;
@@ -25,14 +25,14 @@
   width: 36px;
   height: 36px;
   border-radius: 18px;
-  background: var(--devui-highlight-overlay, rgba(255, 255, 255, .8));
-  box-shadow: var(--devui-shadow-length-hover, 0 4px 16px 0) var(--devui-light-shadow, rgba(0, 0, 0, .1));
+  background: var(--xui-highlight-overlay, rgba(255, 255, 255, .8));
+  box-shadow: var(--xui-shadow-length-hover, 0 4px 16px 0) var(--xui-light-shadow, rgba(0, 0, 0, .1));
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--devui-animation-duration-slow, .3s) var(--devui-animation-ease-in-out-smooth, cubic-bezier(.645, .045, .355, 1));
+  transition: background-color var(--xui-animation-duration-slow, .3s) var(--xui-animation-ease-in-out-smooth, cubic-bezier(.645, .045, .355, 1));
 
   &:hover {
-    background: var(--devui-area, #f8f8f8);
+    background: var(--xui-area, #f8f8f8);
   }
 }

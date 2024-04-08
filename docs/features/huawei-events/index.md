@@ -91,7 +91,7 @@
   width: 100px;
   height: 3px;
   margin: 0 8px;
-  background: var(--devui-icon-fill, #d3d5d9);
+  background: var(--xui-icon-fill, #d3d5d9);
   cursor: pointer;
 }
 
