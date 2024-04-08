@@ -14,11 +14,10 @@
     "build:lib": "vite build --config vite.config.lib.ts",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs && yarn copy:assets",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "register:components": "vitepress-rc",
-    "test": "jest",
-    "copy:assets": "cp docs/assets/* docs/.vitepress/dist/assets"
+    "test": "jest"
   },
   "author": "Kagol <kagol@sina.com>",
   "license": "MIT",

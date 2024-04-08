@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as n,e as s}from"./app.7fe229af.js";const g='{"title":"\u5FEB\u901F\u5F00\u59CB","description":"","frontmatter":{},"headers":[{"level":3,"title":"API","slug":"api"}],"relativePath":"index.md","lastUpdated":1643298738914}',e={},p=s("",27),o=[p];function d(c,l,u,r,i,h){return n(),a("div",null,o)}var v=t(e,[["render",d]]);export{g as __pageData,v as default};
