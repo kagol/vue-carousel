@@ -112,7 +112,7 @@
 
 ```vue
 <template>
-<div style="width: 858px;">
+<div style="width: 528px;">
   <div class="carousel-problemset-title">
     <h3>学习计划</h3>
     <div class="leetcode-pagination-wrapper">
