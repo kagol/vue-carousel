@@ -11,7 +11,7 @@
       <div class="carousel-demo-basic-content">
         <h3>前行不辍，未来可期</h3>
         <p>华为轮值董事长郭平新年致辞</p>
-        <a class="btn-more" href="https://huawei.com/cn/special-release/new-year-message-2022?ic_medium=hwdc&amp;ic_source=corp_banner1_newyearmessage2022" onclick="ga('send', 'event', 'corp_hp_clicks', 'banner1', 'newyearmessage2022');" target="_blank" rel="noopener">了解更多</a>
+        <a v-if="false" class="btn-more" href="https://huawei.com/cn/special-release/new-year-message-2022?ic_medium=hwdc&amp;ic_source=corp_banner1_newyearmessage2022" onclick="ga('send', 'event', 'corp_hp_clicks', 'banner1', 'newyearmessage2022');" target="_blank" rel="noopener">了解更多</a>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@
   cursor: pointer;
 }
 
-.carousel-demo-indicator-item.active{
+.carousel-demo-indicator-item.active {
   background: #5e7ce0;
 }
 </style>

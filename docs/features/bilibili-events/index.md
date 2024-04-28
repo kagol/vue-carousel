@@ -113,6 +113,7 @@
 .carousel-demo-item-bilibili .carousel-tool a {
   color: inherit;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .carousel-demo-item-bilibili .carousel-tool a:hover {
