@@ -4,7 +4,7 @@
 
 ```vue
 <template>
-  <DCarousel>
+  <Carousel>
     <!-- 以下 html 片段拷贝自QQ音乐官网 -->
     <div class="mod_playlist">
       <div class="playlist__item">
@@ -34,7 +34,7 @@
         <div class="playlist__item_box"><div class="playlist__cover mod_cover"><a href="/n/ryqq/playlist/8037914794"><img class="playlist__pic" loading="lazy" src="//qpic.y.qq.com/music_cover/t3ZMFYNfykL5iaia5MjecOXibibjic2UzATaTkHnCvb5zQNQgicf1w4j0yeQ/300?n=1" alt="粉墨登场~坠入人间的星屑少女" data-qar-def="//y.qq.com/mediastyle/global/img/playlist_300.png?max_age=2592000"><i class="mod_cover__mask"></i><i class="mod_cover__icon_play"></i></a></div><h4 class="playlist__title"><span class="playlist__title_txt"><a href="/n/ryqq/playlist/8037914794">粉墨登场~坠入人间的星屑少女</a></span></h4><div class="playlist__other">播放量：762.9万</div></div>
       </div>
     </div>
-  </DCarousel>
+  </Carousel>
 </template>
 
 <style>

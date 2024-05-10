@@ -4,7 +4,7 @@ import usePage from '../composables/use-page'
 import './carousel-indicator.scss'
 
 export default defineComponent({
-  name: 'DCarouselIndicator',
+  name: 'CarouselIndicator',
   props: {
     modelValue: {
       type: Number,

@@ -1,12 +1,12 @@
 ### 手风琴式折叠卡片
 
-`DCarouselIndicator`指示器组件提供了默认插槽，可以单独使用它实现自定义指示器效果，比如手风琴式折叠卡片。
+`CarouselIndicator`指示器组件提供了默认插槽，可以单独使用它实现自定义指示器效果，比如手风琴式折叠卡片。
 
 :::demo
 
 ```vue
 <template>
-  <DCarouselIndicator>
+  <CarouselIndicator>
     <template #default="page">
     <div class="box">
       <div :class="['panel', page.pageIndex === 1 ? 'active' : '']" @click="page.setPageIndex(1)">
@@ -26,7 +26,7 @@
       </div>
     </div>
     </template>
-  </DCarouselIndicator>
+  </CarouselIndicator>
 </template>
 <style>
 .box {

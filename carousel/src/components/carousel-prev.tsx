@@ -3,7 +3,7 @@ import DArrowLeft from './arrow-left'
 import './carousel-prev.scss'
 
 export default defineComponent({
-  name: 'DCarouselPrev',
+  name: 'CarouselPrev',
   setup(props, { slots, attrs }) {
     return () => {
       return <>

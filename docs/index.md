@@ -25,11 +25,11 @@ createApp(App)
 
 ```vue
 <template>
-  <DCarousel>
+  <Carousel>
     <div class="carousel-item">page 1</div>
     <div class="carousel-item">page 2</div>
     <div class="carousel-item">page 3</div>
-  </DCarousel>
+  </Carousel>
 </template>
 <style>
 .carousel-item {
@@ -44,7 +44,7 @@ createApp(App)
 
 <br>
 
-#### DCarousel 组件
+#### Carousel 组件
 
 props
 
@@ -62,7 +62,7 @@ props
 | indicator | -- | --    | 可选，指示器插槽 |
 | pagination | -- | --    | 可选，分页器插槽 |
 
-#### DCarouselIndicator 组件
+#### CarouselIndicator 组件
 
 props
 
@@ -77,7 +77,7 @@ props
 | ------- | ------ | ---- | -------------- |
 | default | ({ pageIndex, setPageIndex }) => {} | --    | 可选，默认插槽 |
 
-#### DCarouselPrev 组件
+#### CarouselPrev 组件
 
 插槽
 
@@ -85,7 +85,7 @@ props
 | ------- | ------ | ---- | -------------- |
 | default | -- | --    | 可选，默认插槽 |
 
-#### DCarouselNext 组件
+#### CarouselNext 组件
 
 插槽
 

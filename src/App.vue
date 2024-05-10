@@ -2,17 +2,33 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
+
+const features = [
+  {
+    "thumbnail": "https://i.ytimg.com/vi/YzsTdLIcbzU/hqdefault.jpg"
+  },
+  {
+    "thumbnail": "https://i.ytimg.com/vi/s_nc1IVoMxc/hqdefault.jpg"
+  },
+  {
+    "thumbnail": "https://i.ytimg.com/vi/MoN9ql6Yymw/hqdefault.jpg"
+  },
+  {
+    "thumbnail": "https://i.ytimg.com/vi/pjyN3rOhJl4/hqdefault.jpg"
+  }
+]
 </script>
 
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    <DCarousel>
-      <div class="carousel-item">page 1</div>
-      <div class="carousel-item">page 2</div>
-      <div class="carousel-item">page 3</div>
-    </DCarousel>
+    <Carousel>
+      <div class="carousel-item">item 1</div>
+      <div class="carousel-item">item 2</div>
+      <div v-for="item in features" class="carousel-item">{{ item.thumbnail }}</div>
+    </Carousel>
+ 
   </div>
 </template>
 

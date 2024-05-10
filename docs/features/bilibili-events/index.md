@@ -5,7 +5,7 @@
 
 ```vue
 <template>
-<DCarousel class="carousel-demo-bilibili">
+<Carousel class="carousel-demo-bilibili">
   <div>
     <div class="carousel-demo-item-bilibili">
       <img src = 'https://s3.bmp.ovh/imgs/2022/01/40f0a4406ac09295.png' />
@@ -53,7 +53,7 @@
   </div>
   <template #indicator="page">
     <div class="carousel-demo-bilibili-indicator-wrapper">
-      <DCarouselIndicator style="justify-content: flex-start;">
+      <CarouselIndicator style="justify-content: flex-start;">
         <div class="carousel-demo-bilibili-indicator-item-wrapper">
           <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 1 && 'active']" @click="page.setPageIndex(1)"></div>
           <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 2 && 'active']" @click="page.setPageIndex(2)"></div>
@@ -62,7 +62,7 @@
           <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 5 && 'active']" @click="page.setPageIndex(5)"></div>
           <div :class="['carousel-demo-bilibili-indicator-item', page.pageIndex === 6 && 'active']" @click="page.setPageIndex(6)"></div>
         </div>
-      </DCarouselIndicator>
+      </CarouselIndicator>
     </div>
   </template>
   <template #pagination="page">
@@ -75,7 +75,7 @@
         </div>
       </div>
   </template>
-</DCarousel>
+</Carousel>
 </template>
 <style>
 .carousel-demo-bilibili {

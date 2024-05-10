@@ -2,23 +2,23 @@
 
 ### 首页轮播
 
-`DCarousel`和`DCarouselIndicator`组合使用，可以很方便地实现 LeetCode 的卡片轮播效果。
+`Carousel`和`CarouselIndicator`组合使用，可以很方便地实现 LeetCode 的卡片轮播效果。
 
 :::demo
 
 ```vue
 <template>
-  <DCarousel class="leetcode-carousel-card">
+  <Carousel class="leetcode-carousel-card">
     <img width="258" src="https://pic.imgdb.cn/item/61f01b5d2ab3f51d91c6f4c7.png" />
     <img width="258" src="https://pic.imgdb.cn/item/61f01b5d2ab3f51d91c6f4cb.png" />
     <img width="258" src="https://pic.imgdb.cn/item/61f01b5d2ab3f51d91c6f4cf.jpg" />
     <template #pagination></template>
     <template #indicator="page">
-      <DCarouselIndicator>
+      <CarouselIndicator>
         <div v-for="item of Array.from(new Array(3).keys())" :class="['leetcode-indicator-item', page.pageIndex === item+1 && 'active']" @click="page.setPageIndex(item+1)"></div>
-      </DCarouselIndicator>
+      </CarouselIndicator>
     </template>
-  </DCarousel>
+  </Carousel>
 </template>
 <style lang="scss">
 .leetcode-carousel-card {
@@ -60,17 +60,17 @@
 
 ```vue
 <template>
-  <DCarousel class="leetcode-carousel-card-company">
+  <Carousel class="leetcode-carousel-card-company">
     <img width="490" src="https://pic.imgdb.cn/item/61f01b5d2ab3f51d91c6f4d6.jpg" />
     <img width="490" src="https://pic.imgdb.cn/item/61f01b5d2ab3f51d91c6f4ed.png" />
     <img width="490" src="https://pic.imgdb.cn/item/61f01b402ab3f51d91c6d1a9.png" />
     <template #pagination></template>
     <template #indicator="page">
-      <DCarouselIndicator>
+      <CarouselIndicator>
         <div v-for="item of Array.from(new Array(3).keys())" :class="['leetcode-indicator-item', page.pageIndex === item+1 && 'active']" @click="page.setPageIndex(item+1)"></div>
-      </DCarouselIndicator>
+      </CarouselIndicator>
     </template>
-  </DCarousel>
+  </Carousel>
 </template>
 <style lang="scss">
 .leetcode-carousel-card-company {
@@ -124,7 +124,7 @@
       </div>
     </div>
   </div>
-  <DCarousel v-model="pageIndex" :autoplay="false" class="leetcode-carousel-card-problemset">
+  <Carousel v-model="pageIndex" :autoplay="false" class="leetcode-carousel-card-problemset">
     <div class="carousel-item-problemset">
       <a href="https://leetcode-cn.com/study-plan/algorithms/" target="_blank">
         <div class="carousel-subitem">
@@ -167,7 +167,7 @@
     </div>
     <template #indicator></template>
     <template #pagination></template>
-  </DCarousel>
+  </Carousel>
 </div>
 </template>
 <script>

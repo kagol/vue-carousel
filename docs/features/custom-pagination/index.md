@@ -4,7 +4,7 @@
 
 ```vue
 <template>
-<DCarousel>
+<Carousel>
   <div class="carousel-item">page 1</div>
   <div class="carousel-item">page 2</div>
   <div class="carousel-item">page 3</div>
@@ -18,7 +18,7 @@
         </div>
       </div>
   </template>
-</DCarousel>
+</Carousel>
 </template>
 <style>
 .carousel-item {

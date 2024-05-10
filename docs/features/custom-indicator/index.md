@@ -6,21 +6,21 @@
 
 ```vue
 <template>
-  <DCarousel>
+  <Carousel>
     <div class="carousel-item-dark">page 1</div>
     <div class="carousel-item-dark">page 2</div>
     <div class="carousel-item-dark">page 3</div>
     <template #indicator="page">
-      <DCarouselIndicator :count="page.count" v-model="page.pageIndex" style="justify-content: flex-start; padding-left: 20px;">
+      <CarouselIndicator :count="page.count" v-model="page.pageIndex" style="justify-content: flex-start; padding-left: 20px;">
         <div
           :class="['carousel-indicator-item', page.pageIndex === item+1 ? 'active' : '']"
           v-for="item of indicatorArr"
           :key="item"
           @click="page.setPageIndex(item+1)"
         ></div>
-      </DCarouselIndicator>
+      </CarouselIndicator>
     </template>
-  </DCarousel>
+  </Carousel>
 </template>
 <script>
 import { defineComponent } from 'vue'

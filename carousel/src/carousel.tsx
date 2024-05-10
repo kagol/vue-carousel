@@ -3,9 +3,9 @@ import { defineComponent, renderSlot, useSlots, watch, toRefs, ref } from 'vue'
 import usePage from './composables/use-page'
 
 // Components
-import DCarouselIndicator from './components/carousel-indicator'
-import DCarouselPrev from './components/carousel-prev'
-import DCarouselNext from './components/carousel-next'
+import CarouselIndicator from './components/carousel-indicator'
+import CarouselPrev from './components/carousel-prev'
+import CarouselNext from './components/carousel-next'
 
 // Composables
 import useAutoplay from './composables/use-autoplay'
@@ -20,11 +20,11 @@ import { carouselProps, CarouselProps } from './carousel.type'
 import './carousel.scss'
 
 export default defineComponent({
-  name: 'DCarousel',
+  name: 'Carousel',
   components: {
-    DCarouselIndicator,
-    DCarouselPrev,
-    DCarouselNext,
+    CarouselIndicator,
+    CarouselPrev,
+    CarouselNext,
   },
   props: carouselProps,
   emits: ['update:modelValue'],
@@ -82,11 +82,11 @@ export default defineComponent({
             ? renderSlot(useSlots(), 'pagination', {
               prevPage, nextPage
             }) : <>
-              <DCarouselPrev onClick={() => {
+              <CarouselPrev onClick={() => {
                 emit('update:modelValue', props.modelValue-1)
                 prevPage()
               }} />
-              <DCarouselNext onClick={() => {
+              <CarouselNext onClick={() => {
                 emit('update:modelValue', props.modelValue+1)
                 nextPage()
               }} />
@@ -99,10 +99,10 @@ export default defineComponent({
               setPageIndex
             })
           ) : (
-            <DCarouselIndicator
+            <CarouselIndicator
               count={count}
               v-model={formattedPageIndex.value}
-            ></DCarouselIndicator>
+            ></CarouselIndicator>
           )}
         </div>
       )

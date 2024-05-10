@@ -1,19 +1,19 @@
 # 指示器位置
 
-`<DCarousel>`组件将其中的指示器子组件暴露出来，并提供了`indicator`插槽，因此可以随意调整`DCarouselIndicator`的位置，比如放在左下角。
+`<Carousel>`组件将其中的指示器子组件暴露出来，并提供了`indicator`插槽，因此可以随意调整`CarouselIndicator`的位置，比如放在左下角。
 
 :::demo
 
 ```vue
 <template>
-  <DCarousel>
+  <Carousel>
     <div class="carousel-item">page 1</div>
     <div class="carousel-item">page 2</div>
     <div class="carousel-item">page 3</div>
     <template #indicator="page">
-      <DCarouselIndicator :count="page.count" v-model="page.pageIndex" @update:modelValue="page.setPageIndex" style="justify-content: flex-start; padding-left: 20px;"></DCarouselIndicator>
+      <CarouselIndicator :count="page.count" v-model="page.pageIndex" @update:modelValue="page.setPageIndex" style="justify-content: flex-start; padding-left: 20px;"></CarouselIndicator>
     </template>
-  </DCarousel>
+  </Carousel>
 </template>
 <style>
 .carousel-item {

@@ -4,7 +4,7 @@
 
 ```vue
 <template>
-<DCarousel>
+<Carousel>
   <div>
     <div class="carousel-demo-basic">
       <img src="https://pic.imgdb.cn/item/61f2ae9a2ab3f51d91000f53.jpg" />
@@ -19,16 +19,16 @@
   <div><img src="https://pic.imgdb.cn/item/61f2ae9a2ab3f51d91000f57.jpg" /></div>
   <template #indicator="page">
     <div class="carousel-demo-indicator-wrapper">
-      <DCarouselIndicator>
+      <CarouselIndicator>
         <div class="carousel-demo-indicator-item-wrapper">
           <div :class="['carousel-demo-indicator-item', page.pageIndex === 1 && 'active']" @click="page.setPageIndex(1)"></div>
           <div :class="['carousel-demo-indicator-item', page.pageIndex === 2 && 'active']" @click="page.setPageIndex(2)"></div>
           <div :class="['carousel-demo-indicator-item', page.pageIndex === 3 && 'active']" @click="page.setPageIndex(3)"></div>
         </div>
-      </DCarouselIndicator>
+      </CarouselIndicator>
     </div>
   </template>
-</DCarousel>
+</Carousel>
 </template>
 <style>
 .carousel-demo-basic {

@@ -3,7 +3,7 @@ import DArrowRight from './arrow-right'
 import './carousel-next.scss'
 
 export default defineComponent({
-  name: 'DCarouselNext',
+  name: 'CarouselNext',
   setup(props, { slots, attrs }) {
     return () => {
       return <>
