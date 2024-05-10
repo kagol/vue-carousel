@@ -34,7 +34,23 @@ export default defineComponent({
     const { pageIndex, prevPage, nextPage, setPageIndex } = usePage(modelValue.value)
     const { startPlay, stopPlay } = useAutoplay(nextPage, interval.value)
 
-    const count = useSlots().default().filter(item => typeof item.type !== 'symbol').length
+    const getCarouselItems = () => {
+      let carouselItems = []
+      useSlots().default().forEach(item => {
+        if (typeof item.type !== 'symbol') {
+          carouselItems.push(item)
+        } else {
+          if (Symbol.keyFor(item.type) === 'v-fgt') {
+            carouselItems = [...carouselItems, ...item.children]
+          } else if(Symbol.keyFor(item.type) === 'v-txt') {
+            console.warn('不支持文本节点，需要包裹一层元素标签，比如：item 改成 <div>item</div>')
+          }
+        }
+      })
+      return carouselItems
+    }
+
+    const count = getCarouselItems().length
     const defaultFormattedPageIndex = formatPageIndex(pageIndex.value, count)
     const formattedPageIndex = ref(defaultFormattedPageIndex)
 
