@@ -1,8 +1,8 @@
 {
   "name": "@kagol/vue-carousel",
-  "version": "0.0.1",
-  "description": "Vue3 Carousel",
-  "homepage": "https://kagol.gitee.io/vue-carousel/",
+  "version": "0.1.0",
+  "description": "Vue3 Carousel: A simple and flexible carousel component for Vue3, extremely lightweight with only 5kB.",
+  "homepage": "https://kagol.github.io/vue-carousel/",
   "files": [
     "dist"
   ],

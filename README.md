@@ -3,19 +3,19 @@
 一个简单、灵活的`Vue3`走马灯组件，非常轻量，只有`5kB`。
 
 预览地址：
-[https://kagol.gitee.io/vue-carousel/](https://kagol.gitee.io/vue-carousel/)
+[https://kagol.github.io/vue-carousel/](https://kagol.github.io/vue-carousel/)
 
 ## 快速开始
 
 创建一个vite工程：
 
 ```
-yarn create vite vite-demo --template vue-ts
+npm create vite vite-demo --template vue-ts
 ```
 
 安装`Carousel`：
 ```
-yarn add @kagol/vue-carousel
+npm install @kagol/vue-carousel
 ```
 
 在`main.ts`中引入`Carousel`：
@@ -31,11 +31,11 @@ createApp(App)
 在`App.vue`中使用：
 
 ```
-<DCarousel>
+<Carousel>
   <div class="carousel-item">page 1</div>
   <div class="carousel-item">page 2</div>
   <div class="carousel-item">page 3</div>
-</DCarousel>
+</Carousel>
 ```
 
 ## 效果动图
@@ -82,7 +82,7 @@ B站：
 
 ## API
 
-### DCarousel 组件
+### Carousel 组件
 
 props
 
@@ -100,7 +100,7 @@ props
 | indicator | -- | --    | 可选，指示器插槽 |
 | pagination | -- | --    | 可选，分页器插槽 |
 
-### DCarouselIndicator 组件
+### CarouselIndicator 组件
 
 props
 
@@ -115,7 +115,7 @@ props
 | ------- | ------ | ---- | -------------- |
 | default | ({ pageIndex, setPageIndex }) => {} | --    | 可选，默认插槽 |
 
-### DCarouselPrev 组件
+### CarouselPrev 组件
 
 插槽
 
@@ -123,7 +123,7 @@ props
 | ------- | ------ | ---- | -------------- |
 | default | -- | --    | 可选，默认插槽 |
 
-### DCarouselNext 组件
+### CarouselNext 组件
 
 插槽
 
